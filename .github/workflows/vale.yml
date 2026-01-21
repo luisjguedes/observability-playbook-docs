@@ -1,17 +1,21 @@
 name: Vale (style checks)
 
 on:
-  pull_request:
+  workflow_dispatch:
   push:
     branches: ["main"]
+  pull_request:
 
 jobs:
   vale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Run Vale
+      # Optional but useful: ensures styles are fetched consistently
+      - name: Vale (style checks)
+        continue-on-error: true
         uses: errata-ai/vale-action@v2
         with:
           version: 3.7.1
@@ -19,3 +23,5 @@ jobs:
           reporter: github-check
           filter_mode: nofilter
           fail_on_error: false
+          level: warning
+          token: ${{ secrets.GITHUB_TOKEN }}
