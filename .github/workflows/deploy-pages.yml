@@ -2,12 +2,13 @@ name: Deploy docs site
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     paths:
       - "docs/**"
       - "mkdocs.yml"
       - "requirements.txt"
       - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,10 +21,11 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,7 +42,7 @@ jobs:
 
       - name: Build site
         run: |
-          mkdocs build --clean
+          mkdocs build --strict --clean
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
