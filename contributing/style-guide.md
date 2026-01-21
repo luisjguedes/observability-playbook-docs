@@ -148,8 +148,8 @@ Use these terms consistently:
 ## Accessibility and inclusivity
 
 - Avoid idioms and sarcasm.
-- Avoid terms like “easy”, “simple”, “trivial”.
-- Prefer: “This takes about 2 minutes” or “This requires X”.
+- Avoid terms like “easy,” “simple,” “trivial.”
+- Prefer: “This takes about 2 minutes” or “This requires X.”
 
 ---
 
