@@ -1,6 +1,6 @@
 site_name: Observability Playbook Docs
-site_url: https://<YOUR_GITHUB_USERNAME>.github.io/observability-playbook-docs/
-repo_url: https://github.com/<YOUR_GITHUB_USERNAME>/observability-playbook-docs
+site_url: https://luisjguedes.github.io/observability-playbook-docs/
+repo_url: https://github.com/luisjguedes/observability-playbook-docs
 theme:
   name: material
   features:
