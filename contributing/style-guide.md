@@ -3,7 +3,7 @@
 This repo follows a concise, customer-focused style aligned with Microsoft’s guidance:
 https://learn.microsoft.com/en-us/style-guide/welcome/
 
-This file is a practical “working standard” for contributors. It does **not** copy the Microsoft guide, it applies the same principles in a repo-friendly way.
+This file is a practical “working standard” for contributors. It doesn't copy the Microsoft guide, it applies the same principles in a repo-friendly way.
 
 ---
 
