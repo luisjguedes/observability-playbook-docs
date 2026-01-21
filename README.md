@@ -11,10 +11,10 @@ A small, public, non-proprietary repository that demonstrates documentation craf
 - **Quality mindset**: style and consistency rules suitable for team use
 
 ## Contents (high level)
-- `docs/` — Markdown content structured like a real product documentation set
-- `api/` — OpenAPI examples used as “contract sources”
-- `tools/` — small scripts that turn specs into human-readable docs (when applicable)
-- `styles/` or `contributing/` — writing rules and conventions (style, terminology, etc.)
+- `docs/`: Markdown content structured like a real product documentation set
+- `api/`: OpenAPI examples used as “contract sources”
+- `tools/`: small scripts that turn specs into human-readable docs (when applicable)
+- `styles/` or `contributing/`: writing rules and conventions (style, terminology, etc.)
 
 ## How to view
 - Browse the Markdown in this repo
