@@ -1,0 +1,26 @@
+name: Vale (style checks)
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Vale
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y vale
+
+      - name: Download Vale packages (Microsoft)
+        run: |
+          vale sync
+
+      - name: Run Vale
+        run: |
+          vale .
