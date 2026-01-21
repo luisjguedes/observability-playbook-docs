@@ -1,27 +1,37 @@
 name: Vale (style checks)
 
 on:
-  workflow_dispatch:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.mdx"
+      - ".vale.ini"
+      - "styles/**"
   push:
     branches: ["main"]
-  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.mdx"
+      - ".vale.ini"
+      - "styles/**"
+  workflow_dispatch:
 
 jobs:
   vale:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Optional but useful: ensures styles are fetched consistently
-      - name: Vale (style checks)
-        continue-on-error: true
+      - name: Run Vale
         uses: errata-ai/vale-action@v2
         with:
           version: 3.7.1
-          files: .
-          reporter: github-check
+          files: |
+            **/*.md
+            **/*.mdx
+          reporter: local
           filter_mode: nofilter
           fail_on_error: false
           level: warning
-          token: ${{ secrets.GITHUB_TOKEN }}
