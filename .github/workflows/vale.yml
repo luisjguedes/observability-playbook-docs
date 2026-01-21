@@ -28,7 +28,7 @@ jobs:
         uses: errata-ai/vale-action@v2
         with:
           version: 3.7.1
-          files: |
+          files: docs/**/*.md README.md contributing/**/*.md
             **/*.md
             **/*.mdx
           reporter: local
